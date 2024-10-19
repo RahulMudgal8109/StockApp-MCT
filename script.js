@@ -103,3 +103,4 @@ stockDropdown.addEventListener('change', () => {
 
 // Initialize the dashboard
 fetchTrendingStocks();
+fetchStockData("aapl")
