@@ -1,4 +1,4 @@
-const apiKey = 'XG5Sn09hlKIT92mTeCqv7T2tawY8OfUO'; // Replace with your actual API key
+const apiKey = 'PTO8Q1BhCGwhabCPedqLnE8n0hCOx3vz'; // Replace with your actual API key
 //const apiKey = 'YOUR_ALPHA_VANTAGE_API_KEY'; // Replace with your actual API key
 const stockDropdown = document.getElementById('stockDropdown');
 const stockInput = document.getElementById('stockInput');
@@ -106,6 +106,7 @@ async function addToComparisonTable(symbol) {
             <td>${stockData['5. volume']}</td>
             <td><button class="removeStock" data-symbol="${symbol}">Remove</button></td>
         </tr>
+       
     `;
 
     comparisonTableDiv.querySelector('table tbody').insertAdjacentHTML('beforeend', row);
@@ -160,4 +161,5 @@ comparisonTableDiv.addEventListener('click', (event) => {
 
 // Initialize the dashboard
 fetchTrendingStocks();
+fetchStockData("aapl")
 updateComparisonTable(); // Create the table structure on load
